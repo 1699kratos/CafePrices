@@ -17,6 +17,9 @@
 		E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE862723692A00509F69 /* CafeteriasViewController.swift */; };
 		E63AEE8A2723692B00509F69 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE872723692A00509F69 /* TableViewCell.swift */; };
 		E63AEE8B2723692B00509F69 /* cafeteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE882723692A00509F69 /* cafeteria.swift */; };
+		E63AEE8F2723A0EE00509F69 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE8C2723A0EE00509F69 /* MenuViewController.swift */; };
+		E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */; };
+		E63AEE912723A0EE00509F69 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		E63AEE862723692A00509F69 /* CafeteriasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriasViewController.swift; sourceTree = "<group>"; };
 		E63AEE872723692A00509F69 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E63AEE882723692A00509F69 /* cafeteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cafeteria.swift; sourceTree = "<group>"; };
+		E63AEE8C2723A0EE00509F69 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 		E63AEE51272223F600509F69 /* CafePrices */ = {
 			isa = PBXGroup;
 			children = (
+				E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */,
+				E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */,
+				E63AEE8C2723A0EE00509F69 /* MenuViewController.swift */,
 				E63AEE882723692A00509F69 /* cafeteria.swift */,
 				E63AEE862723692A00509F69 /* CafeteriasViewController.swift */,
 				E63AEE872723692A00509F69 /* TableViewCell.swift */,
@@ -239,6 +248,7 @@
 			files = (
 				E63AEE5F272223F700509F69 /* LaunchScreen.storyboard in Resources */,
 				E63AEE5C272223F700509F69 /* Assets.xcassets in Resources */,
+				E63AEE912723A0EE00509F69 /* CollectionViewCell.xib in Resources */,
 				E63AEE5A272223F600509F69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E63AEE8A2723692B00509F69 /* TableViewCell.swift in Sources */,
+				E63AEE8F2723A0EE00509F69 /* MenuViewController.swift in Sources */,
 				E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */,
+				E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */,
 				E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */,
 				E63AEE8B2723692B00509F69 /* cafeteria.swift in Sources */,
 				E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */,
