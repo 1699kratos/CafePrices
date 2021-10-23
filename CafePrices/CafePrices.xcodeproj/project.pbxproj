@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE52272223F600509F69 /* AppDelegate.swift */; };
 		E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE54272223F600509F69 /* SceneDelegate.swift */; };
-		E63AEE57272223F600509F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE56272223F600509F69 /* ViewController.swift */; };
 		E63AEE5A272223F600509F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE58272223F600509F69 /* Main.storyboard */; };
 		E63AEE5C272223F700509F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE5B272223F700509F69 /* Assets.xcassets */; };
 		E63AEE5F272223F700509F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE5D272223F700509F69 /* LaunchScreen.storyboard */; };
 		E63AEE6A272223F800509F69 /* CafePricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE69272223F800509F69 /* CafePricesTests.swift */; };
 		E63AEE75272223F800509F69 /* CafePricesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE74272223F800509F69 /* CafePricesUITests.swift */; };
+		E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE862723692A00509F69 /* CafeteriasViewController.swift */; };
+		E63AEE8A2723692B00509F69 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE872723692A00509F69 /* TableViewCell.swift */; };
+		E63AEE8B2723692B00509F69 /* cafeteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE882723692A00509F69 /* cafeteria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		E63AEE4F272223F600509F69 /* CafePrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafePrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63AEE52272223F600509F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E63AEE54272223F600509F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E63AEE56272223F600509F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E63AEE59272223F600509F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E63AEE5B272223F700509F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E63AEE5E272223F700509F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		E63AEE70272223F800509F69 /* CafePricesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafePricesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63AEE74272223F800509F69 /* CafePricesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafePricesUITests.swift; sourceTree = "<group>"; };
 		E63AEE76272223F800509F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63AEE862723692A00509F69 /* CafeteriasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriasViewController.swift; sourceTree = "<group>"; };
+		E63AEE872723692A00509F69 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E63AEE882723692A00509F69 /* cafeteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cafeteria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		E63AEE51272223F600509F69 /* CafePrices */ = {
 			isa = PBXGroup;
 			children = (
+				E63AEE882723692A00509F69 /* cafeteria.swift */,
+				E63AEE862723692A00509F69 /* CafeteriasViewController.swift */,
+				E63AEE872723692A00509F69 /* TableViewCell.swift */,
 				E63AEE52272223F600509F69 /* AppDelegate.swift */,
 				E63AEE54272223F600509F69 /* SceneDelegate.swift */,
-				E63AEE56272223F600509F69 /* ViewController.swift */,
 				E63AEE58272223F600509F69 /* Main.storyboard */,
 				E63AEE5B272223F700509F69 /* Assets.xcassets */,
 				E63AEE5D272223F700509F69 /* LaunchScreen.storyboard */,
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63AEE57272223F600509F69 /* ViewController.swift in Sources */,
+				E63AEE8A2723692B00509F69 /* TableViewCell.swift in Sources */,
 				E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */,
 				E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */,
+				E63AEE8B2723692B00509F69 /* cafeteria.swift in Sources */,
+				E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
