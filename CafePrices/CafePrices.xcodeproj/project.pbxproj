@@ -20,6 +20,7 @@
 		E63AEE8F2723A0EE00509F69 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE8C2723A0EE00509F69 /* MenuViewController.swift */; };
 		E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */; };
 		E63AEE912723A0EE00509F69 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */; };
+		E63AEE932724E26800509F69 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE922724E26800509F69 /* item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E63AEE8C2723A0EE00509F69 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		E63AEE922724E26800509F69 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				E63AEE5B272223F700509F69 /* Assets.xcassets */,
 				E63AEE5D272223F700509F69 /* LaunchScreen.storyboard */,
 				E63AEE60272223F700509F69 /* Info.plist */,
+				E63AEE922724E26800509F69 /* item.swift */,
 			);
 			path = CafePrices;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				E63AEE8F2723A0EE00509F69 /* MenuViewController.swift in Sources */,
 				E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */,
 				E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */,
+				E63AEE932724E26800509F69 /* item.swift in Sources */,
 				E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */,
 				E63AEE8B2723692B00509F69 /* cafeteria.swift in Sources */,
 				E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */,
