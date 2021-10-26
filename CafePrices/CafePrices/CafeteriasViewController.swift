@@ -15,7 +15,6 @@ class CafeteriasViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
@@ -34,9 +33,9 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "MenuViewController") as? MenuViewController
-            else{
-                return
-            }
+        else {
+            return
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

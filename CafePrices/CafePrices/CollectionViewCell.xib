@@ -10,52 +10,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="CafePrices" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="151" height="187"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="264"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="151" height="187"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="264"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="tostitos salsa verde" id="k2k-eR-Yxx">
-                        <rect key="frame" x="0.0" y="0.0" width="151" height="138"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tostitos Salsa Verde" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aY-f2-eT1">
-                        <rect key="frame" x="10" y="144" width="130" height="23"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <rect key="frame" x="11" y="190" width="159" height="63"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRO-tK-SJJ">
-                        <rect key="frame" x="39" y="161" width="68" height="21"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <rect key="frame" x="42" y="227" width="93" height="31"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" image="UtMxBgjkEJv3iXENvW3HUxXBcpL6nlnE5qDbPPsS" id="k2k-eR-Yxx">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="219"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="4aY-f2-eT1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="1ah-5V-g7z"/>
-                <constraint firstAttribute="trailing" secondItem="VRO-tK-SJJ" secondAttribute="trailing" constant="44" id="5Vh-O2-zVN"/>
-                <constraint firstAttribute="bottom" secondItem="VRO-tK-SJJ" secondAttribute="bottom" constant="5" id="Edb-ac-hkB"/>
-                <constraint firstItem="4aY-f2-eT1" firstAttribute="top" secondItem="k2k-eR-Yxx" secondAttribute="bottom" constant="6" id="UiJ-W4-Q6j"/>
-                <constraint firstItem="VRO-tK-SJJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="39" id="XDc-Y0-bbO"/>
-                <constraint firstItem="VRO-tK-SJJ" firstAttribute="top" secondItem="k2k-eR-Yxx" secondAttribute="bottom" constant="23" id="ZSc-B9-6fJ"/>
-                <constraint firstAttribute="trailing" secondItem="4aY-f2-eT1" secondAttribute="trailing" constant="11" id="c86-ay-cXQ"/>
-                <constraint firstAttribute="bottom" secondItem="4aY-f2-eT1" secondAttribute="bottom" constant="20" id="d3m-5Q-4IS"/>
+                <constraint firstItem="4aY-f2-eT1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="11" id="1ah-5V-g7z"/>
+                <constraint firstItem="VRO-tK-SJJ" firstAttribute="top" secondItem="k2k-eR-Yxx" secondAttribute="bottom" constant="8" symbolic="YES" id="37e-os-9e5"/>
+                <constraint firstAttribute="trailing" secondItem="VRO-tK-SJJ" secondAttribute="trailing" constant="45" id="7Hq-Js-nvE"/>
+                <constraint firstItem="4aY-f2-eT1" firstAttribute="top" secondItem="k2k-eR-Yxx" secondAttribute="bottom" constant="-29" id="UiJ-W4-Q6j"/>
+                <constraint firstAttribute="trailing" secondItem="4aY-f2-eT1" secondAttribute="trailing" constant="10" id="c86-ay-cXQ"/>
+                <constraint firstAttribute="bottom" secondItem="4aY-f2-eT1" secondAttribute="bottom" constant="11" id="d3m-5Q-4IS"/>
+                <constraint firstItem="VRO-tK-SJJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="42" id="h6C-4G-iSF"/>
+                <constraint firstAttribute="bottom" secondItem="VRO-tK-SJJ" secondAttribute="bottom" constant="6" id="uHf-Vk-alS"/>
             </constraints>
-            <size key="customSize" width="381" height="454"/>
+            <size key="customSize" width="381" height="531"/>
             <connections>
                 <outlet property="itemImage" destination="k2k-eR-Yxx" id="qhq-RZ-rsY"/>
                 <outlet property="itemName" destination="4aY-f2-eT1" id="WtU-zg-9O6"/>
                 <outlet property="itemPrice" destination="VRO-tK-SJJ" id="2tZ-yj-XZw"/>
             </connections>
-            <point key="canvasLocation" x="218.11594202898553" y="183.81696428571428"/>
+            <point key="canvasLocation" x="217.39130434782609" y="209.59821428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="tostitos salsa verde" width="960" height="960"/>
+        <image name="UtMxBgjkEJv3iXENvW3HUxXBcpL6nlnE5qDbPPsS" width="970" height="1336"/>
     </resources>
 </document>
