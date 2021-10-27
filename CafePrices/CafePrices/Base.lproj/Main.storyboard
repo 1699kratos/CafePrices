@@ -9,50 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="B4Y-a6-r43">
-            <objects>
-                <viewController id="9ot-FP-vKf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xaa-hm-o6s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PWC-6q-Udd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u85-R3-Ed7">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HrW-dQ-Yku">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qFd-E6-RpB">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="4Wg-K0-V4y"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="PWC-6q-Udd" firstAttribute="top" secondItem="4Wg-K0-V4y" secondAttribute="top" id="9pK-b5-U5r"/>
-                            <constraint firstItem="PWC-6q-Udd" firstAttribute="leading" secondItem="4Wg-K0-V4y" secondAttribute="leading" id="N3h-Yh-5NK"/>
-                            <constraint firstItem="4Wg-K0-V4y" firstAttribute="bottom" secondItem="PWC-6q-Udd" secondAttribute="bottom" id="tRm-kJ-Ip4"/>
-                            <constraint firstItem="4Wg-K0-V4y" firstAttribute="trailing" secondItem="PWC-6q-Udd" secondAttribute="trailing" id="vVp-bf-CfO"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="11z-Q1-jPk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lUu-hX-DZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="946" y="88"/>
-        </scene>
         <!--Cafeterias View Controller-->
         <scene sceneID="pg0-cG-fIs">
             <objects>
@@ -141,6 +97,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4y-Ia-H2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-788" y="88"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="2IY-9b-zaV">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="X48-Cy-EDe" customClass="MenuViewController" customModule="CafePrices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vqp-gg-g3v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-d9-ytS">
+                                <rect key="frame" x="0.0" y="54" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZHA-7Y-5ub">
+                                    <size key="itemSize" width="174" height="187"/>
+                                    <size key="estimatedItemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="itemCell" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-pa-RJf" customClass="CollectionViewCell" customModule="CafePrices" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="180" height="187"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Em-lY-Smu">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="187"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="187"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CL7-Dq-nrn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CL7-Dq-nrn" firstAttribute="trailing" secondItem="bAb-d9-ytS" secondAttribute="trailing" id="MZ7-v1-x0L"/>
+                            <constraint firstItem="bAb-d9-ytS" firstAttribute="leading" secondItem="vqp-gg-g3v" secondAttribute="leading" id="OkZ-HV-bM6"/>
+                            <constraint firstItem="CL7-Dq-nrn" firstAttribute="bottom" secondItem="bAb-d9-ytS" secondAttribute="bottom" id="XtY-Wv-B88"/>
+                            <constraint firstItem="bAb-d9-ytS" firstAttribute="top" secondItem="CL7-Dq-nrn" secondAttribute="top" constant="10" id="ttp-qx-KMQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W8G-GS-qta"/>
+                    <connections>
+                        <outlet property="menuCollection" destination="bAb-d9-ytS" id="rDy-Yr-y0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6D-nU-LJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
