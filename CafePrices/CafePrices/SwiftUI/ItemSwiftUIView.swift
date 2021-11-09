@@ -17,12 +17,12 @@ struct ItemSwiftUIView: View {
             VStack {
                 ItemImageSwiftUIView()
                 HStack { Text(self.object.itemName) .font(.title) }
-                HStack { Text(self.object.itemPrice) }
+                HStack { Text("$" + self.object.itemPrice) }
             }
-            .navigationTitle("Detalles...")
+            .navigationTitle("Detalles")
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button("<Back"){
+                    Button("Back"){
                        dissmissView()
                     }
                 }

@@ -35,10 +35,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let environmentObject = Item()
-        environmentObject.itemImage = "lonche"
-        environmentObject.itemName = "Lonche"
-        environmentObject.itemPrice = "50"
+        let environmentObject = Item(itemName: "Lonche", itemPrice: "50", itemImage: "lonche")
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
         self.present(vc, animated: true, completion: nil)
