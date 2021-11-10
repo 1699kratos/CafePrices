@@ -7,9 +7,9 @@
 
 import Foundation
 class Item: ObservableObject {
-    @Published var itemName: String = "dorito"
-    @Published var itemPrice: String = "$78"
-    @Published var itemImage: String = "lonche"
+    @Published var itemName: String
+    @Published var itemPrice: String
+    @Published var itemImage: String 
     
     init(itemName: String, itemPrice: String, itemImage: String){
         self.itemName = itemName
