@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MenuViewController: UIViewController {
-    let items = [Item]()
+    var items = [Item]()
     @IBOutlet weak var menuCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +32,17 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         item.itemName.text = "Tostitos Salsa Verde"
         item.itemPrice.text = "$50"
         return item
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let environmentObject = Item(itemName: "Lonche", itemPrice: "50", itemImage: "lonche")
+        let view = ItemSwiftUIView(dissmissView: dismiss)
+        let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+     func dismiss() {
+        self.dismiss(animated: true) 
     }
 }

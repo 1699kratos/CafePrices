@@ -32,10 +32,7 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = storyboard.instantiateViewController(identifier: "MenuViewController") as? MenuViewController
-        else {
-            return
-        }
+        guard let vc = storyboard.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

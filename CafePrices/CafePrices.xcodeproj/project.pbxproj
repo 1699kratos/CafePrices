@@ -21,6 +21,8 @@
 		E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */; };
 		E63AEE912723A0EE00509F69 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */; };
 		E63AEE932724E26800509F69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE922724E26800509F69 /* Item.swift */; };
+		E6953FE42728CFB800DD104D /* ItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6953FE32728CFB800DD104D /* ItemSwiftUIView.swift */; };
+		E6953FE8272A24F800DD104D /* ItemImageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6953FE7272A24F700DD104D /* ItemImageSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		E63AEE8D2723A0EE00509F69 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E63AEE8E2723A0EE00509F69 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		E63AEE922724E26800509F69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E6953FE32728CFB800DD104D /* ItemSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSwiftUIView.swift; sourceTree = "<group>"; };
+		E6953FE7272A24F700DD104D /* ItemImageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		E63AEE51272223F600509F69 /* CafePrices */ = {
 			isa = PBXGroup;
 			children = (
+				E6953FEB27386CB600DD104D /* SwiftUI */,
 				E6953FE22728C44500DD104D /* View */,
 				E6953FE12728C40C00DD104D /* Model */,
 				E6953FE02728C3FF00DD104D /* Xib */,
@@ -176,6 +181,15 @@
 				E63AEE872723692A00509F69 /* TableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E6953FEB27386CB600DD104D /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E6953FE7272A24F700DD104D /* ItemImageSwiftUIView.swift */,
+				E6953FE32728CFB800DD104D /* ItemSwiftUIView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +327,10 @@
 				E63AEE8F2723A0EE00509F69 /* MenuViewController.swift in Sources */,
 				E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */,
 				E63AEE902723A0EE00509F69 /* CollectionViewCell.swift in Sources */,
+				E6953FE42728CFB800DD104D /* ItemSwiftUIView.swift in Sources */,
 				E63AEE932724E26800509F69 /* Item.swift in Sources */,
 				E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */,
+				E6953FE8272A24F800DD104D /* ItemImageSwiftUIView.swift in Sources */,
 				E63AEE8B2723692B00509F69 /* Cafeteria.swift in Sources */,
 				E63AEE892723692B00509F69 /* CafeteriasViewController.swift in Sources */,
 			);

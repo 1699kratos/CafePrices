@@ -6,11 +6,14 @@
 //
 
 import Foundation
-class Item {
-    var itemName: String
-    var itemImage: String
-    init(itemName: String, itemImage: String) {
+class Item: ObservableObject {
+    @Published var itemName: String
+    @Published var itemPrice: String
+    @Published var itemImage: String 
+    
+    init(itemName: String, itemPrice: String, itemImage: String){
         self.itemName = itemName
+        self.itemPrice = itemPrice
         self.itemImage = itemImage
     }
 }
