@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		770ABA8B95C466C4C00CA4A7 /* Pods_CafePrices_CafePricesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653F2AA50C3E9A50EAA5FFF7 /* Pods_CafePrices_CafePricesUITests.framework */; };
+		8527C322392BEB87A5463C73 /* Pods_CafePricesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6233AD1522DDA04C184854BC /* Pods_CafePricesTests.framework */; };
+		DD80E8F0E17F94A50B63DF4E /* Pods_CafePrices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB20BA930205972F0DDFBA /* Pods_CafePrices.framework */; };
 		E63AEE53272223F600509F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE52272223F600509F69 /* AppDelegate.swift */; };
 		E63AEE55272223F600509F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE54272223F600509F69 /* SceneDelegate.swift */; };
 		E63AEE5A272223F600509F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63AEE58272223F600509F69 /* Main.storyboard */; };
@@ -23,6 +26,7 @@
 		E63AEE932724E26800509F69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63AEE922724E26800509F69 /* Item.swift */; };
 		E6953FE42728CFB800DD104D /* ItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6953FE32728CFB800DD104D /* ItemSwiftUIView.swift */; };
 		E6953FE8272A24F800DD104D /* ItemImageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6953FE7272A24F700DD104D /* ItemImageSwiftUIView.swift */; };
+		E6953FED2745B01E00DD104D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6953FEC2745B01E00DD104D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00817DE497339FD08E3FBA91 /* Pods-CafePrices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePrices.debug.xcconfig"; path = "Target Support Files/Pods-CafePrices/Pods-CafePrices.debug.xcconfig"; sourceTree = "<group>"; };
+		6233AD1522DDA04C184854BC /* Pods_CafePricesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafePricesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		653F2AA50C3E9A50EAA5FFF7 /* Pods_CafePrices_CafePricesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafePrices_CafePricesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6670838E88F128ED1B730C71 /* Pods-CafePricesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePricesTests.debug.xcconfig"; path = "Target Support Files/Pods-CafePricesTests/Pods-CafePricesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66EB20BA930205972F0DDFBA /* Pods_CafePrices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafePrices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA709A8255F0A03D8F24280 /* Pods-CafePricesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePricesTests.release.xcconfig"; path = "Target Support Files/Pods-CafePricesTests/Pods-CafePricesTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF34A80C333EB6148548B75D /* Pods-CafePrices-CafePricesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePrices-CafePricesUITests.debug.xcconfig"; path = "Target Support Files/Pods-CafePrices-CafePricesUITests/Pods-CafePrices-CafePricesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E63AEE4F272223F600509F69 /* CafePrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafePrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63AEE52272223F600509F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E63AEE54272223F600509F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +76,9 @@
 		E63AEE922724E26800509F69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E6953FE32728CFB800DD104D /* ItemSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSwiftUIView.swift; sourceTree = "<group>"; };
 		E6953FE7272A24F700DD104D /* ItemImageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageSwiftUIView.swift; sourceTree = "<group>"; };
+		E6953FEC2745B01E00DD104D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F77D3D8D45A4FF8DBC69F55C /* Pods-CafePrices-CafePricesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePrices-CafePricesUITests.release.xcconfig"; path = "Target Support Files/Pods-CafePrices-CafePricesUITests/Pods-CafePrices-CafePricesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F8EBFE73993DB8BA081CB3D6 /* Pods-CafePrices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafePrices.release.xcconfig"; path = "Target Support Files/Pods-CafePrices/Pods-CafePrices.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD80E8F0E17F94A50B63DF4E /* Pods_CafePrices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8527C322392BEB87A5463C73 /* Pods_CafePricesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +102,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				770ABA8B95C466C4C00CA4A7 /* Pods_CafePrices_CafePricesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FD3281C7965DB993BF79EF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66EB20BA930205972F0DDFBA /* Pods_CafePrices.framework */,
+				653F2AA50C3E9A50EAA5FFF7 /* Pods_CafePrices_CafePricesUITests.framework */,
+				6233AD1522DDA04C184854BC /* Pods_CafePricesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A9E24A6B2C110B69C02B8EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00817DE497339FD08E3FBA91 /* Pods-CafePrices.debug.xcconfig */,
+				F8EBFE73993DB8BA081CB3D6 /* Pods-CafePrices.release.xcconfig */,
+				DF34A80C333EB6148548B75D /* Pods-CafePrices-CafePricesUITests.debug.xcconfig */,
+				F77D3D8D45A4FF8DBC69F55C /* Pods-CafePrices-CafePricesUITests.release.xcconfig */,
+				6670838E88F128ED1B730C71 /* Pods-CafePricesTests.debug.xcconfig */,
+				CFA709A8255F0A03D8F24280 /* Pods-CafePricesTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E63AEE46272223F600509F69 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +140,8 @@
 				E63AEE68272223F800509F69 /* CafePricesTests */,
 				E63AEE73272223F800509F69 /* CafePricesUITests */,
 				E63AEE50272223F600509F69 /* Products */,
+				7A9E24A6B2C110B69C02B8EA /* Pods */,
+				0FD3281C7965DB993BF79EF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +158,7 @@
 		E63AEE51272223F600509F69 /* CafePrices */ = {
 			isa = PBXGroup;
 			children = (
+				E6953FEC2745B01E00DD104D /* GoogleService-Info.plist */,
 				E6953FEB27386CB600DD104D /* SwiftUI */,
 				E6953FE22728C44500DD104D /* View */,
 				E6953FE12728C40C00DD104D /* Model */,
@@ -199,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E63AEE79272223F800509F69 /* Build configuration list for PBXNativeTarget "CafePrices" */;
 			buildPhases = (
+				D569B2C86707A0A794190C0B /* [CP] Check Pods Manifest.lock */,
 				E63AEE4B272223F600509F69 /* Sources */,
 				E63AEE4C272223F600509F69 /* Frameworks */,
 				E63AEE4D272223F600509F69 /* Resources */,
+				D09834BB7F0CECE4001275F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +262,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E63AEE7C272223F800509F69 /* Build configuration list for PBXNativeTarget "CafePricesTests" */;
 			buildPhases = (
+				D047834041766B4E2098CEF7 /* [CP] Check Pods Manifest.lock */,
 				E63AEE61272223F800509F69 /* Sources */,
 				E63AEE62272223F800509F69 /* Frameworks */,
 				E63AEE63272223F800509F69 /* Resources */,
@@ -234,9 +281,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E63AEE7F272223F800509F69 /* Build configuration list for PBXNativeTarget "CafePricesUITests" */;
 			buildPhases = (
+				0BB27DA2B30E61059A9B16B6 /* [CP] Check Pods Manifest.lock */,
 				E63AEE6C272223F800509F69 /* Sources */,
 				E63AEE6D272223F800509F69 /* Frameworks */,
 				E63AEE6E272223F800509F69 /* Resources */,
+				2EFC10BF8CD5C733DB9B36F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +346,7 @@
 			files = (
 				E63AEE5F272223F700509F69 /* LaunchScreen.storyboard in Resources */,
 				E63AEE5C272223F700509F69 /* Assets.xcassets in Resources */,
+				E6953FED2745B01E00DD104D /* GoogleService-Info.plist in Resources */,
 				E63AEE912723A0EE00509F69 /* CollectionViewCell.xib in Resources */,
 				E63AEE5A272223F600509F69 /* Main.storyboard in Resources */,
 			);
@@ -317,6 +367,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BB27DA2B30E61059A9B16B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafePrices-CafePricesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EFC10BF8CD5C733DB9B36F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafePrices-CafePricesUITests/Pods-CafePrices-CafePricesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafePrices-CafePricesUITests/Pods-CafePrices-CafePricesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CafePrices-CafePricesUITests/Pods-CafePrices-CafePricesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D047834041766B4E2098CEF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafePricesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09834BB7F0CECE4001275F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafePrices/Pods-CafePrices-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CafePrices/Pods-CafePrices-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CafePrices/Pods-CafePrices-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D569B2C86707A0A794190C0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CafePrices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E63AEE4B272223F600509F69 /* Sources */ = {
@@ -505,6 +658,7 @@
 		};
 		E63AEE7A272223F800509F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00817DE497339FD08E3FBA91 /* Pods-CafePrices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +677,7 @@
 		};
 		E63AEE7B272223F800509F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8EBFE73993DB8BA081CB3D6 /* Pods-CafePrices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -541,6 +696,7 @@
 		};
 		E63AEE7D272223F800509F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6670838E88F128ED1B730C71 /* Pods-CafePricesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +718,7 @@
 		};
 		E63AEE7E272223F800509F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFA709A8255F0A03D8F24280 /* Pods-CafePricesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -583,6 +740,7 @@
 		};
 		E63AEE80272223F800509F69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF34A80C333EB6148548B75D /* Pods-CafePrices-CafePricesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +760,7 @@
 		};
 		E63AEE81272223F800509F69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77D3D8D45A4FF8DBC69F55C /* Pods-CafePrices-CafePricesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
