@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+import Firebase
 class CafeteriasViewController: UIViewController {
     var cafes = [Cafeteria]()
+    
+    let ref = Database.database().reference()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.ref.child("test").setValue("Test")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
         self.navigationController?.pushViewController(vc, animated: true)
