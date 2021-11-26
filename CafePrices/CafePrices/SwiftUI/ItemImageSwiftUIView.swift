@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
-
+import SDWebImageSwiftUI
 struct ItemImageSwiftUIView: View {
     
     @EnvironmentObject var object : Item
     
     var body: some View {
-        Image(self.object.itemImage)
+        let itemUrl = URL(string: object.itemImage)
+        WebImage(url: itemUrl)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 200, height: 250)
-            .shadow(radius: 10)
     }
 }
 
