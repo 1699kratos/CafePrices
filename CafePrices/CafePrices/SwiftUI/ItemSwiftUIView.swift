@@ -16,8 +16,8 @@ struct ItemSwiftUIView: View {
         NavigationView {
             VStack {
                 ItemImageSwiftUIView()
-                HStack { Text(self.object.itemName) .font(.title) }
-                HStack { Text("$" + self.object.itemPrice) }
+                HStack { Text(self.object.name) .font(.title) }
+                HStack { Text("$" + self.object.price) }
             }
             .navigationTitle("Detalles")
             .toolbar{

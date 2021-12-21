@@ -7,13 +7,13 @@
 
 import Foundation
 class Item: ObservableObject {
-    @Published var itemName: String
-    @Published var itemPrice: String
-    @Published var itemImage: String 
+    @Published var name: String
+    @Published var price: String
+    @Published var image: String 
     
-    init(itemName: String, itemPrice: String, itemImage: String){
-        self.itemName = itemName
-        self.itemPrice = itemPrice
-        self.itemImage = itemImage
+    init(name: String, price: String, image: String){
+        self.name = name 
+        self.price = price
+        self.image = image
     }
 }

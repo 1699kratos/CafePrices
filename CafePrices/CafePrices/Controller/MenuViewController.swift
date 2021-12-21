@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 import Firebase
-import SDWebImage
+import SDWebImage //espacios
 class MenuViewController: UIViewController {
     var items = [Item]()
     let ref = Database.database().reference()
@@ -20,18 +20,19 @@ class MenuViewController: UIViewController {
         menuCollection.register(nibCell, forCellWithReuseIdentifier: "itemCell")
         menuCollection.dataSource = self
         menuCollection.delegate = self
-        dataFirebase()
+        getFirebaseData()
     }
-    func dataFirebase() {
-        self.ref.child("cafeterias").child(cafeName).child("botanas").observeSingleEvent(of: .value){
+    func getFirebaseData() {
+        self.ref.child("cafeterias").child(cafeName).child("botanas")  .observeSingleEvent(of: .value) {
+            
             (snapshot) in
             let data =  snapshot.value as? [String:Any]
             if let unwrapped = data {
                 for snack in unwrapped{
                     let name = snack.value as! [String:Any]
-                    let item = Item(itemName: name["name"] as! String,
-                                          itemPrice: name["price"] as! String,
-                                          itemImage: name["image"] as! String)
+                    let item = Item(name: name["name"] as? String ?? "", 
+                                    price: name["price"] as? String ?? "",
+                                          image: name["image"] as? String ?? "")
                     self.items.append(item)
                     self.menuCollection.reloadData()
                 }
@@ -48,15 +49,15 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as? CollectionViewCell ?? CollectionViewCell()
-        let fileUrl = URL(string: items[indexPath.row].itemImage)
-        item.itemImage.sd_setImage(with: fileUrl)
-        item.itemName.text = items[indexPath.row].itemName
-        item.itemPrice.text = "$" + items[indexPath.row].itemPrice
+        let fileUrl = URL(string: items[indexPath.row].image)
+        item.itemImage.load(url: fileUrl!)
+        item.itemName.text = items[indexPath.row].name
+        item.itemPrice.text = "$" + items[indexPath.row].price
         return item
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let environmentObject = Item(itemName: items[indexPath.row].itemName, itemPrice: items[indexPath.row].itemPrice, itemImage: items[indexPath.row].itemImage)
+        let environmentObject = Item(name: items[indexPath.row].name, price: items[indexPath.row].price, image: items[indexPath.row].image)
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
         self.present(vc, animated: true, completion: nil)
@@ -65,5 +66,21 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
      func dismiss() {
         self.dismiss(animated: true)
+    }
+    
+    
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }
