@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+
 struct ItemImageSwiftUIView: View {
     
     @EnvironmentObject var object : Item
@@ -17,9 +17,7 @@ struct ItemImageSwiftUIView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 200, height: 250)
-        
     }
-
 }
 
 struct ItemImageSwiftUIView_Previews: PreviewProvider {
