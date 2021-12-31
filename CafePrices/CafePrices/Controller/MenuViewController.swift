@@ -7,9 +7,12 @@
 
 import UIKit
 import SwiftUI
+import Firebase
 
 class MenuViewController: UIViewController {
     var items = [Item]()
+    let ref = Database.database().reference()
+    var cafeName: String = ""
     @IBOutlet weak var menuCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,25 +20,45 @@ class MenuViewController: UIViewController {
         menuCollection.register(nibCell, forCellWithReuseIdentifier: "itemCell")
         menuCollection.dataSource = self
         menuCollection.delegate = self
+        getFirebaseData()
+    }
+    func getFirebaseData() {
+        self.ref.child("cafeterias").child(cafeName).child("botanas")  .observeSingleEvent(of: .value) {
+            
+            (snapshot) in
+            let data =  snapshot.value as? [String:Any]
+            if let unwrapped = data {
+                for snack in unwrapped{
+                    let name = snack.value as! [String:Any]
+                    let item = Item(name: name["name"] as? String ?? "", 
+                                    price: name["price"] as? String ?? "",
+                                          image: name["image"] as? String ?? "")
+                    self.items.append(item)
+                    self.menuCollection.reloadData()
+                }
+            }
+        }
     }
 }
 
 extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  12
+        return  items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as? CollectionViewCell ?? CollectionViewCell()
-        item.itemImage.image = UIImage(named: "tostitos salsa verde")
-        item.itemName.text = "Tostitos Salsa Verde"
-        item.itemPrice.text = "$50"
+        if let fileUrl = URL(string: items[indexPath.row].image) {
+            item.itemImage.load(url: fileUrl)
+        }
+        item.itemName.text = items[indexPath.row].name
+        item.itemPrice.text = "$" + items[indexPath.row].price
         return item
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let environmentObject = Item(itemName: "Lonche", itemPrice: "50", itemImage: "lonche")
+        let environmentObject = Item(name: items[indexPath.row].name, price: items[indexPath.row].price, image: items[indexPath.row].image)
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
         self.present(vc, animated: true, completion: nil)
@@ -43,6 +66,19 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
      func dismiss() {
-        self.dismiss(animated: true) 
+        self.dismiss(animated: true)
+    }
+}
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

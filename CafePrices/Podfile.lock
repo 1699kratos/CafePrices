@@ -73,6 +73,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Storage
   - Nuke (~> 9.0)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -111,6 +112,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: c441a33f87c276ca1f62388962d3e47d4a77e43c
+PODFILE CHECKSUM: 36e3a7c6a5c95280a61fb2809e8b0bc8906489b6
 
 COCOAPODS: 1.11.2
