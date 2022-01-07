@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 import Firebase
+import SDWebImage
 
 class MenuViewController: UIViewController {
     var items = [Item]()
@@ -50,7 +51,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as? CollectionViewCell ?? CollectionViewCell()
         if let fileUrl = URL(string: items[indexPath.row].image) {
-            item.itemImage.load(url: fileUrl)
+            item.itemImage.sd_setImage(with: fileUrl)
         }
         item.itemName.text = items[indexPath.row].name
         item.itemPrice.text = "$" + items[indexPath.row].price
@@ -69,16 +70,4 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         self.dismiss(animated: true)
     }
 }
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+

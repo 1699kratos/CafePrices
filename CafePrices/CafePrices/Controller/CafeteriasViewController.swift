@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class CafeteriasViewController: UIViewController  {
     
@@ -47,7 +48,7 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cafeteria", for: indexPath) as? TableViewCell ?? TableViewCell()
         cell.cafeteriaName.text = cafes[indexPath.row].name
         if let fileUrl = URL(string: cafes[indexPath.row].image) {
-            cell.cafeteriaImage.load(url: fileUrl)
+            cell.cafeteriaImage.sd_setImage(with: fileUrl)
         }
         cell.cafeteriaImage.layer.cornerRadius = cell.frame.height/2
         return cell
