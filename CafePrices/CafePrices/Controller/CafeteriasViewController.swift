@@ -9,29 +9,35 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class CafeteriasViewController: UIViewController  {
+class CafeteriasViewController: UIViewController {
     
     var cafes = [Cafeteria]()
     let ref = Database.database().reference()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Cafeterias UANL"
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         getFirebaseData()
     }
     
     func getFirebaseData() {
         self.ref.child("cafeterias").observeSingleEvent(of: .value) {
-            
             (snapshot) in
             let data = snapshot.value as? [String:Any]
             if let unwrapped = data {
                 for cafe in unwrapped{
-                    let  cafeFirebase = cafe.value as! [String:Any]
-                    let cafet = Cafeteria(name:cafeFirebase["name"] as? String ?? "", image: cafeFirebase["image"] as? String ?? "")
-                    self.cafes.append(cafet)
-                    self.tableView.reloadData()
+                    if let cafeFirebase = cafe.value as? [String:Any] {
+                        let cafet = Cafeteria(name:cafeFirebase["name"] as? String ?? "", image: cafeFirebase["image"] as? String ?? "")
+                        self.cafes.append(cafet)
+                        
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }

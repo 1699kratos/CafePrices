@@ -17,12 +17,12 @@ struct ItemSwiftUIView: View {
             VStack {
                 ItemImageSwiftUIView()
                 HStack { Text(self.object.name) .font(.title) }
-                HStack { Text("$" + self.object.price) }
+                HStack { Text("$" + self.object.price).font(.custom("Helvetica Neue", size: 40)) }
             }
             .navigationTitle("Detalles")
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button("Back"){
+                    Button("Regresar") {
                        dissmissView()
                     }
                 }
@@ -32,8 +32,3 @@ struct ItemSwiftUIView: View {
     }
 }
 
-//struct ItemSwiftUIView_Previews: PreviewProvider {
-  //  static var previews: some View {
-    //    ItemSwiftUIView().environmentObject(Item())
-    //}
-//}

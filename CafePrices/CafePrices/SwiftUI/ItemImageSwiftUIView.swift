@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 struct ItemImageSwiftUIView: View {
     
     @EnvironmentObject var object : Item
+    
     var body: some View {
         if let fileUrl = URL(string: object.image) {
             WebImage(url: fileUrl)
