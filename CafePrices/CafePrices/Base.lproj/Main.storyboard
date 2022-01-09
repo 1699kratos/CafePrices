@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cafeterias View Controller-->
+        <!--Cafeterias UANL-->
         <scene sceneID="pg0-cG-fIs">
             <objects>
                 <viewController id="tfr-ni-RMN" customClass="CafeteriasViewController" customModule="CafePrices" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <constraint firstItem="bOm-bc-fy4" firstAttribute="bottom" secondItem="hdr-fm-9jA" secondAttribute="bottom" id="v64-Gk-teV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="e37-l0-jbs"/>
+                    <navigationItem key="navigationItem" title="Cafeterias UANL" id="e37-l0-jbs"/>
                     <connections>
                         <outlet property="tableView" destination="bOm-bc-fy4" id="46i-ek-S8x"/>
                     </connections>
@@ -123,7 +123,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="itemCell" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-pa-RJf" customClass="CollectionViewCell" customModule="CafePrices" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" reuseIdentifier="itemCell" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-pa-RJf" customClass="CollectionViewCell" customModule="CafePrices" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="180" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Em-lY-Smu">

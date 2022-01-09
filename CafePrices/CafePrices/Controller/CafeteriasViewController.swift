@@ -18,8 +18,6 @@ class CafeteriasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Cafeterias UANL"
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -30,11 +28,11 @@ class CafeteriasViewController: UIViewController {
         self.ref.child("cafeterias").observeSingleEvent(of: .value) {
             (snapshot) in
             let data = snapshot.value as? [String:Any]
-            if let unwrapped = data {
-                for cafe in unwrapped{
+            if let cafeterias = data {
+                for cafe in cafeterias {
                     if let cafeFirebase = cafe.value as? [String:Any] {
-                        let cafet = Cafeteria(name:cafeFirebase["name"] as? String ?? "", image: cafeFirebase["image"] as? String ?? "")
-                        self.cafes.append(cafet)
+                        let cafeteria = Cafeteria(name:cafeFirebase["name"] as? String ?? "", image: cafeFirebase["image"] as? String ?? "")
+                        self.cafes.append(cafeteria)
                         
                         self.tableView.reloadData()
                     }
