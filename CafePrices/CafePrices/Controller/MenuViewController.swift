@@ -32,12 +32,13 @@ class MenuViewController: UIViewController {
         self.ref.child("cafeterias").child(cafeName.lowercased()).child("botanas")  .observeSingleEvent(of: .value) {
             (snapshot) in
             let data =  snapshot.value as? [String:Any]
-            if let unwrapped = data {
-                for snack in unwrapped{
-                    if let name = snack.value as? [String:Any] {
-                        let item = Item(name: name["name"] as? String ?? "",
-                                        price: name["price"] as? String ?? "",
-                                        image: name["image"] as? String ?? "")
+            if let snacks = data {
+                for snack in snacks {
+                    if let product = snack.value as? [String:Any] {
+                        let name = product["name"] as? String ?? ""
+                        let price = product["price"] as? String ?? ""
+                        let image = product["image"] as? String ?? ""
+                        let item = Item(name: name, price: price, image: image)
                         self.items.append(item)
                         
                         self.menuCollection.reloadData()
@@ -69,7 +70,6 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
         self.present(vc, animated: true, completion: nil)
-        
     }
     
     func dismiss() {

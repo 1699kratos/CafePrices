@@ -31,7 +31,9 @@ class CafeteriasViewController: UIViewController {
             if let cafeterias = data {
                 for cafe in cafeterias {
                     if let cafeFirebase = cafe.value as? [String:Any] {
-                        let cafeteria = Cafeteria(name:cafeFirebase["name"] as? String ?? "", image: cafeFirebase["image"] as? String ?? "")
+                        let name = cafeFirebase["name"] as? String ?? ""
+                        let image = cafeFirebase["image"] as? String ?? ""
+                        let cafeteria = Cafeteria(name: name, image: image)
                         self.cafes.append(cafeteria)
                         
                         self.tableView.reloadData()
