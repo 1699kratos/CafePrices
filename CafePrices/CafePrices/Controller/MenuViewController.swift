@@ -69,7 +69,11 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let environmentObject = Item(name: items[indexPath.row].name, price: items[indexPath.row].price, image: items[indexPath.row].image)
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
+<<<<<<< HEAD
         self.present(vc, animated: true, completion: nil)
+=======
+        self.present(vc, animated: true, completion: nil) 
+>>>>>>> 76035186cc4b4b9d7923f970eeb82e7275848eb2
     }
     
     func dismiss() {
