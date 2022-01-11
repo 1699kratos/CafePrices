@@ -60,6 +60,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if let fileUrl = URL(string: items[indexPath.row].image) {
             item.itemImage.sd_setImage(with: fileUrl)
         }
+        
         item.itemName.text = items[indexPath.row].name
         item.itemPrice.text = "$" + items[indexPath.row].price
         return item
@@ -70,7 +71,7 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let view = ItemSwiftUIView(dissmissView: dismiss)
         let vc = UIHostingController(rootView: view.environmentObject(environmentObject))
         self.present(vc, animated: true, completion: nil)
-        self.present(vc, animated: true, completion: nil) 
+        
     }
     
     func dismiss() {
