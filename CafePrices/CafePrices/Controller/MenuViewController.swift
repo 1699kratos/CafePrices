@@ -8,33 +8,41 @@
 import UIKit
 import SwiftUI
 import Firebase
+import SDWebImage
 
 class MenuViewController: UIViewController {
+    
     var items = [Item]()
     let ref = Database.database().reference()
     var cafeName: String = ""
     @IBOutlet weak var menuCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nibCell = UINib(nibName: "CollectionViewCell", bundle: nil)
         menuCollection.register(nibCell, forCellWithReuseIdentifier: "itemCell")
+        
         menuCollection.dataSource = self
         menuCollection.delegate = self
+        
         getFirebaseData()
     }
     func getFirebaseData() {
-        self.ref.child("cafeterias").child(cafeName).child("botanas")  .observeSingleEvent(of: .value) {
-            
+        self.ref.child("cafeterias").child(cafeName.lowercased()).child("botanas")  .observeSingleEvent(of: .value) {
             (snapshot) in
             let data =  snapshot.value as? [String:Any]
-            if let unwrapped = data {
-                for snack in unwrapped{
-                    let name = snack.value as! [String:Any]
-                    let item = Item(name: name["name"] as? String ?? "", 
-                                    price: name["price"] as? String ?? "",
-                                          image: name["image"] as? String ?? "")
-                    self.items.append(item)
-                    self.menuCollection.reloadData()
+            if let snacks = data {
+                for snack in snacks {
+                    if let product = snack.value as? [String:Any] {
+                        let name = product["name"] as? String ?? ""
+                        let price = product["price"] as? String ?? ""
+                        let image = product["image"] as? String ?? ""
+                        let item = Item(name: name, price: price, image: image)
+                        self.items.append(item)
+                        
+                        self.menuCollection.reloadData()
+                    }
                 }
             }
         }
@@ -50,8 +58,9 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCell", for: indexPath) as? CollectionViewCell ?? CollectionViewCell()
         if let fileUrl = URL(string: items[indexPath.row].image) {
-            item.itemImage.load(url: fileUrl)
+            item.itemImage.sd_setImage(with: fileUrl)
         }
+        
         item.itemName.text = items[indexPath.row].name
         item.itemPrice.text = "$" + items[indexPath.row].price
         return item
@@ -65,20 +74,8 @@ extension MenuViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     }
     
-     func dismiss() {
+    func dismiss() {
         self.dismiss(animated: true)
     }
 }
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+

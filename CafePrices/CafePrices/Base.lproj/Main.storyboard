@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cafeterias View Controller-->
+        <!--Cafeterias UANL-->
         <scene sceneID="pg0-cG-fIs">
             <objects>
                 <viewController id="tfr-ni-RMN" customClass="CafeteriasViewController" customModule="CafePrices" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +74,7 @@
                             <constraint firstItem="bOm-bc-fy4" firstAttribute="bottom" secondItem="hdr-fm-9jA" secondAttribute="bottom" id="v64-Gk-teV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="e37-l0-jbs"/>
+                    <navigationItem key="navigationItem" title="Cafeterias UANL" id="e37-l0-jbs"/>
                     <connections>
                         <outlet property="tableView" destination="bOm-bc-fy4" id="46i-ek-S8x"/>
                     </connections>
@@ -89,6 +90,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bdz-87-Ll0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" name="AccentColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="tfr-ni-RMN" kind="relationship" relationship="rootViewController" id="uPZ-Gg-ce3"/>
@@ -149,6 +155,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
