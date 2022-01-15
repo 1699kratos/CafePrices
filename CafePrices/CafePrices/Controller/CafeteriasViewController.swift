@@ -7,18 +7,23 @@
 
 import UIKit
 import Firebase
+import MapKit
 
 class CafeteriasViewController: UIViewController  {
     
     var cafes = [Cafeteria]()
     let ref = Database.database().reference()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         getFirebaseData()
     }
+    
+    
+    
     
     func getFirebaseData() {
         self.ref.child("cafeterias").observeSingleEvent(of: .value) {
@@ -50,6 +55,7 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
             cell.cafeteriaImage.load(url: fileUrl)
         }
         cell.cafeteriaImage.layer.cornerRadius = cell.frame.height/2
+        
         return cell
     }
     
@@ -57,7 +63,7 @@ extension CafeteriasViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = storyboard.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else { return }
         vc.cafeName = cafes[indexPath.row].name
-        self.navigationController?.pushViewController(vc, animated: true)
+        //self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

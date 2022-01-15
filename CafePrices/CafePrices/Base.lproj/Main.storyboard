@@ -45,20 +45,32 @@
                                                         <constraint firstAttribute="width" constant="58" id="MON-Mk-0Ql"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="683-xy-p6q">
+                                                    <rect key="frame" x="322" y="24" width="30" height="30"/>
+                                                    <state key="normal" title="Ir"/>
+                                                    <connections>
+                                                        <action selector="showMap:" destination="Yjo-7n-8WX" eventType="touchUpInside" id="wAI-ac-YrR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="683-xy-p6q" firstAttribute="top" secondItem="Smf-lz-wbe" secondAttribute="topMargin" constant="13" id="67x-oa-8vt"/>
                                                 <constraint firstItem="xap-vw-89z" firstAttribute="top" secondItem="Smf-lz-wbe" secondAttribute="topMargin" constant="-8" id="GXb-L6-08E"/>
                                                 <constraint firstItem="7js-k4-8Bu" firstAttribute="leading" secondItem="Smf-lz-wbe" secondAttribute="leading" constant="122" id="P5z-vq-iue"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="683-xy-p6q" secondAttribute="bottom" constant="12" id="Qbb-rb-v45"/>
+                                                <constraint firstItem="683-xy-p6q" firstAttribute="leading" secondItem="7js-k4-8Bu" secondAttribute="trailing" constant="124" id="W8h-fd-Y5s"/>
                                                 <constraint firstItem="7js-k4-8Bu" firstAttribute="leading" secondItem="xap-vw-89z" secondAttribute="trailing" constant="44" id="XvY-BO-p4v"/>
                                                 <constraint firstItem="7js-k4-8Bu" firstAttribute="top" secondItem="Smf-lz-wbe" secondAttribute="topMargin" constant="17.5" id="aGJ-Y3-czr"/>
                                                 <constraint firstItem="xap-vw-89z" firstAttribute="leading" secondItem="Smf-lz-wbe" secondAttribute="leadingMargin" id="fZD-2k-Hfx"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="xap-vw-89z" secondAttribute="bottom" constant="-4" id="hX3-Ke-kfb"/>
                                                 <constraint firstItem="7js-k4-8Bu" firstAttribute="centerY" secondItem="Smf-lz-wbe" secondAttribute="centerY" id="kye-RE-cse"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="683-xy-p6q" secondAttribute="trailing" constant="42" id="qJc-Lf-EDG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cafeteriaImage" destination="xap-vw-89z" id="9HO-U0-aC6"/>
                                             <outlet property="cafeteriaName" destination="7js-k4-8Bu" id="2xc-rG-W9i"/>
+                                            <outlet property="mapButton" destination="683-xy-p6q" id="3fH-9t-LtI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
